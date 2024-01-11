@@ -1,0 +1,40 @@
+<body>
+
+
+  <div class="container">
+    <h3 class="foglalasok">Új foglalás felvétele</h3>
+    <hr>
+
+    <div class="row justify-content-center">
+      <a href="/booking-list" class="col-lg-2 col-sm-6 btn mb-3">Foglalások</a>
+      <div class="col-lg-7"></div>
+      <a href="/home" class="col-lg-2 col-sm-6 btn mb-3">Főoldal</a>
+    </div>
+
+    <hr>
+  </div>
+<div class="bg">
+  <form #userlogin="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <input type="text" name="nev" placeholder="név" [(ngModel)]="formData.nev">
+
+    <input type="number" name="fo" placeholder="0" [(ngModel)]="formData.fo">
+
+    <input type="date" value="{{valueDate}}" />
+    <script>
+      const input = document.querySelector('input');
+      input.value = "{{valueDate}}";
+    </script>
+
+    <input type="text" name="cim" placeholder="cim" [(ngModel)]="formData.cim">
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <div *ngIf="submitted">
+    <h3>Submitted Data:</h3>
+    <p>Név: {{ formData.nev }}</p>
+    <p>Cím: {{ formData.cim }}</p>
+  </div>
+</div>
+</body>

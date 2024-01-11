@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(221, 221, 162);
+    overflow: auto;
+   
+}
+
+.btn:first-of-type {
+    margin-top: 14px;
+    background-color: rgb(116, 77, 77);
+    color: bisque;
+    background-color: rgb(73, 79, 168);
+}
+
+.btn:last-of-type {
+    margin-top: 14px;
+    background-color: rgb(116, 77, 77);
+    color: bisque;
+    background-color: rgb(8, 105, 8);
+}
+
+.foglalasok {
+    padding-top: 20px;
+    text-align: center;
+}
+
+form{
+    display: grid;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+input, button {
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.bg {
+    margin-top: 54px;
+    background-image: url(../../assets/pics/escape2.webp);
+    height: 670px;
+}

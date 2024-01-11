@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(219, 219, 130);
+    overflow: auto;
+}
+
+.btn:first-of-type {
+    margin-top: 14px;
+    background-color: rgb(116, 77, 77);
+    color: bisque;
+    background-color: rgb(73, 79, 168);
+}
+
+.btn:last-of-type {
+    margin-top: 14px;
+    background-color: rgb(116, 77, 77);
+    color: bisque;
+    background-color: rgb(8, 105, 8);
+}
+
+.foglalasok {
+    padding-top: 20px;
+    text-align: center;
+}
+
+thead th{
+    background-color: chocolate;
+}
+
+td {
+    background-color: rgb(185, 206, 199);
+}
+
+tr:hover td {
+    background-color: rgb(218, 159, 118);
+}

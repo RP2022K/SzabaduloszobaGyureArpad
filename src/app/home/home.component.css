@@ -1,0 +1,39 @@
+.container-fluid {
+    margin: 0;
+    width: 100%;
+    height: 897px;
+    background-image: url("../../assets/pics/jatek.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color:rgb(73, 55, 55);
+}
+
+.about {
+    width: 336px;
+    height: 740px;
+    position: relative;
+    background-color: rgb(128, 86, 31);
+    top: 6px;
+    right: 35%;
+    border-radius: 6px;
+}
+
+.row {
+    margin: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.navi {
+    margin: 0;
+    background-color: rgb(73, 55, 55);
+}
+
+.btn {
+    margin-top: 14px;
+    background-color: rgb(116, 77, 77);
+    color: bisque;
+}
