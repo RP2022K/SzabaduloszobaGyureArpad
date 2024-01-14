@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { BookinglistService } from '../bookinglist.service';
+import { Component, OnInit } from '@angular/core';
+import { BookingService } from '../booking.service';
 
 @Component({
   selector: 'booking-list',
@@ -12,7 +12,7 @@ export class BookingListComponent {
   errorMessage = "";
   isError = false;
 
-  constructor(private service: BookinglistService) {
+  constructor(private service: BookingService) {
     this.service.getReservations().subscribe({
       next: (res) => {
         this.foglalasok = res;
@@ -25,4 +25,6 @@ export class BookingListComponent {
     })
 
   }
+  
+
 }

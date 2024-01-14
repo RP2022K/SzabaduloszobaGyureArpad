@@ -10,10 +10,11 @@
 }
 
 .about {
+    padding-top: 40px;
     width: 336px;
     height: 740px;
     position: relative;
-    background-color: rgb(128, 86, 31);
+    background-color: rgb(170, 125, 66);
     top: 6px;
     right: 35%;
     border-radius: 6px;
@@ -36,4 +37,18 @@ a:link {
     margin-top: 14px;
     background-color: rgb(116, 77, 77);
     color: bisque;
+}
+
+.about span {
+    color: rgb(168, 34, 34);
+    display: flex;
+    justify-content: center;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+.about p:last-of-type{
+    margin-bottom: 100px;
 }

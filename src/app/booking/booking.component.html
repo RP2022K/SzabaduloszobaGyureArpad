@@ -1,6 +1,5 @@
 <body>
 
-
   <div class="container">
     <h3 class="foglalasok">Új foglalás felvétele</h3>
     <hr>
@@ -13,28 +12,35 @@
 
     <hr>
   </div>
-<div class="bg">
-  <form #userlogin="ngForm" (ngSubmit)="onSubmit()" novalidate>
-    <input type="text" name="nev" placeholder="név" [(ngModel)]="formData.nev">
+  <div class="bg">
 
-    <input type="number" name="fo" placeholder="0" [(ngModel)]="formData.fo">
+    <form id="myform" #bookingPost="ngForm" (ngSubmit)="onSubmit(bookingPost.value)">
 
-    <input type="date" value="{{valueDate}}" />
-    <script>
-      const input = document.querySelector('input');
-      input.value = "{{valueDate}}";
-    </script>
+      <input type="text" class="form-control" id="name" required ngModel name="nev"
+        #name="ngModel" placeholder="{{valueName}}" />
+      <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+        <div *ngIf="name.hasError('required')">Kötelező nevet megadni !</div>
+      </div>
 
-    <input type="text" name="cim" placeholder="cim" [(ngModel)]="formData.cim">
+      <input type="number" name="fo" ngModel placeholder="{{valueFo}}" #fo="ngModel" required min="2" max="16">
+      <div *ngIf="fo.touched && fo.value<2 || fo.value>16" class="alert alert-danger">
+        <div *ngIf="fo.hasError('required')">A létszámnak min. 2 max 16 kell lennie</div>
+      </div>
+    
+      <input type="date" name="datum" [(ngModel)]="valueDate">
+      <input type="text" name="cim" ngModel placeholder="{{valueCim}}"#fo="ngModel" required>
+      
+      <input type="text" name="iranyitoszam" ngModel placeholder="{{valueIrszam}}" required>
 
-    <button type="submit">Submit</button>
 
-  </form>
+      <button type="submit">Foglalás</button>
 
-  <div *ngIf="submitted">
-    <h3>Submitted Data:</h3>
-    <p>Név: {{ formData.nev }}</p>
-    <p>Cím: {{ formData.cim }}</p>
+
+      <div id="booking" *ngIf="submitted">Foglalás felvéve</div>
+
+    </form>
+
+
   </div>
-</div>
+
 </body>
